@@ -1,6 +1,6 @@
 
 function copytext() {
-  // Get the text field
+
   var copyBtn = document.getElementById("copyButton");
   copyBtn.onclick = function () {
     var myCode = document.getElementById("textarea").value;
@@ -20,7 +20,6 @@ function encrypt1() {
   var key = "my secret key";
   var message = document.getElementById("textarea").value;
 
-  // Encrypt the message using Blowfish
   var encrypted = CryptoJS.AES.encrypt(message, key).toString();
 
   document.getElementById("textarea").value = encrypted;
@@ -29,7 +28,6 @@ function encrypt1() {
 
 function decrypt1() {
   var key = "my secret key";
-  // Decrypt the message using Blowfish
   var message = document.getElementById("decryptText").value;
   var decrypted = CryptoJS.AES.decrypt(message, key).toString(
     CryptoJS.enc.Utf8
